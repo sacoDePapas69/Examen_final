@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title%}Create category{% endblock %}
+{% block body %}
+<div class = "container jumbotron" >
+    <div class = "text-center">
+        <h2 style = "font-size: 300%; ">Create category</h2>
+    </div>
+    <br>
+    <div class = "row">
+        <div class = "col-12 col-md-6 offset-md-3">
+        <form enctype="multipart/form-data" method="POST" action="#" id="formulario">
+        {% csrf_token %}
+        <div class="row">
+        <div class="col">
+            <div class="form-group">
+                {{ form.name.label }}
+                {{ form.name }}
+            </div>
+            <div class="form-group">
+                {{ form.status.label }}
+                {{form.status }}
+            </div>
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Enviar" >
+        <a href="{% url 'categories' %}" class="btn btn-success">Categories</a>
+    </div>
+</div>
+</div>
+</div>
+{% endblock %}

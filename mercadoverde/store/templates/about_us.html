@@ -1,0 +1,157 @@
+{% extends 'base.html' %}
+{% block head %}
+<style>
+    .text-about {
+        text-align: left;
+        color: rgb(66, 66, 66);
+    }
+
+    .text-title {
+        font-weight:bold;
+        font-size: 250%;
+    }
+
+    .text-subtitle{
+        font-weight: bold;
+    }
+
+    .text-content {
+        margin: auto;
+    }
+    
+    .text-list {
+        float: left;
+    }
+
+    .text-small-title {
+        font-weight: bold;
+        font-size:120%;
+    }
+</style>
+{% endblock %}
+{% block title %}Sobre nosotros{% endblock %}
+{% block body %}
+<br>
+<br>
+<br>
+
+<div class="container">   
+    <div class="jumbotron " style = "background-color: rgb(228, 228, 228); padding: 2%;border-radius: 5px;">
+      <h2>Quiénes somos</h2>
+      <br>
+      <h4>
+          Somos una comunidad de vecinos con la intención de ayudar, comenzamos a 
+          vender nuestros productos de jardinería como maceteros, tierra de hojas,
+           flores y arbustos, todo esto para ayudar a una fundación sin fines de lucro.
+          <br>
+          <br>
+          Llevamos meses con este proyecto de ayudar y colaborar con buenas causas,
+           por lo tanto, comenzamos en redes sociales vendiendo nuestros productos,
+            pero luego de un tiempo las vendas comenzaron a aumentar por lo que tuvimos
+            que recurrir a una página web para expandir nuestro mercado y poder obtener
+             mayores recaudaciones.</h4>
+    </div>
+</div>
+
+<div class="embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item"
+      src="https://www.youtube.com/embed/iV4lxbpEaAY"
+      title="YouTube video"
+      allowfullscreen></iframe>
+  </div>
+
+
+<div class = "container">
+    <div class = "jumbotron text-center" style = "background-color:transparent;text-align: left;">
+            <h2 class = "text-about text-title">
+                Terminos y condiciones
+            </h2>
+            <br>
+            <h3 class = "text-about text-subtitle">
+                Politicas de uso y acceso
+            </h3>
+            <br>
+            <p class = "text-about text-content">
+                Se entenderá, de aquí en adelante [La empresa] comoerwr ingeniería S.p.qwre R.U.T 76ewt.wqe9, 
+                domiciliada en Obispo Donoso 6, Of. 302. Providencia.<br><br>
+                Se entenderá, de aquí en adelante [Portal] a cualquier medio digital hospedado en cualquiera 
+                de los siguientes dominios y subdominios propiedad exclusiva de la empresa.
+            </p>
+            <br>
+            <br>
+            <ul class = "text-about" style="text-align: left;">
+                <li>
+                    google.com
+                </li>
+                <br>
+                <li>
+                    facebook.com
+                </li>
+                <br>
+                <li>
+                    twitter.com
+                </li>
+                <br>
+            </ul>
+            <br>
+            <br>
+            <h3 class = "text-about text-subtitle">
+                Devoluciones
+            </h3>
+            <br>
+            <h2 class = "text-about text-small-title">
+                Por defectos de fabrica
+            </h2>
+            <br>
+            <p class = "text-about text-content">
+                Se entenderá, de aquí en adelante [Usuario] a la persona o entidad que haga uso del portal.<br><br>
+                El portal servirá de plataforma de interacción e intercambio y divulgación de información así 
+                como también como plataforma de venta de la empresa, y medio de comunicación entre esta y el usuario.<br><br>
+                A modo de excepción el uso y acceso a shop.afel.cl, está regulado según los términos y condiciones de MercadoShops 
+                y únicamente por estos, dejando sin efecto los fundados en esta página, dichos términos se pueden 
+                visualizar en el siguiente enlace: https://www.mercadolibre.cls_1086<br><br>
+                Toda compra realizada a la empresa por una plataforma externa se regirá únicamente por los términos propios de dicha plataforma, dejando sin efecto los términos fundados en está página.
+            </p>
+    </div>   
+</div>
+<div class="container">
+    <div class = "row">
+        <div class = "col-md-4 col-sm-6">
+            <div class="card text-center" style="border: none;">
+                <br>
+                <div class = "card-title text-subtitle">
+                    <h3>A tu casa</h3>
+                </div>
+                <i class="card-title bi bi-truck" style="color: black;font-size: 200px;"></i>
+                <div class="card-body">
+                    <p class="card-text">A todas la regiones</p>
+                </div>
+            </div>
+        </div>
+        <div class = "col-md-4 col-sm-6">
+            <div class="card text-center" style="border: none;">
+                <br>
+                <div class = "card-title text-subtitle">
+                    <h3>Devoluciones</h3>
+                </div>
+                <i class="card-title bi bi-coin" style="color: black;font-size: 200px;"></i>
+                <div class="card-body">
+                    <p class="card-text">Devolucion si no te gusta el producto</p>
+                </div>
+            </div>
+        </div>
+        <div class = "col-md-4 col-sm-6">
+            <div class="card text-center" style="border: none;">
+                <br>
+                <div class = "card-title text-subtitle">
+                    <h3>Clientes</h3>
+                </div>
+                <i class="card-title bi-chat-left-heart" style="color: black;font-size: 200px;"></i>
+                <div class="card-body">
+                    <p class="card-text">Atencion al cliente</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

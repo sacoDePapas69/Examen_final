@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title%}CRUD{% endblock %}
+{% block body %}
+<body>
+    <div class="container">
+        <div class = "row">
+            <div class = "col-md-4 col-sm-6">
+                <div class="card text-center" style="border: none;cursor: pointer;" onclick = location.href="{% url 'categories' %}">
+                    <i class="card-title bi bi-tag" style="color: black;font-size: 250px;"></i>
+                </div>
+                <div class = "card-footer text-center" style = "background-color: white;border:none;">
+                    <h2 style = "font-size: 50px;">Categories</h2>
+                </div>
+            </div>
+            <div class = "col-md-4 col-sm-6">
+                <div class="card text-center" style="border: none;cursor: pointer;" onclick = location.href="{% url 'products' %}">
+                    <i class="card-title bi bi-shop" style="color: black;font-size: 250px;"></i>
+                </div>
+                <div class = "card-footer text-center" style = "background-color: white;border:none;">
+                    <h2 style = "font-size: 50px;">Products</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% block title%}Products{% endblock %}
+{% block body %}
+  <br>
+  <br>
+  <div class = "container jumbotron">
+    <div class = "text-center">
+      <h2 style = "font-size: 300%;">Products</h2>
+      <br>
+      <button type="button" class="btn btn-success" onclick = location.href="{% url 'create_product' %}"><i class="bi bi-plus-lg"></i></button>
+    </div>
+    <br>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Stock</th>
+            <th scope="col">Money</th>
+            <th scope="col">Price</th>
+            <th scope="col">Order</th>
+            <th scope="col">Image</th>
+            <th scope="col">Status</th>
+            <th scope="col">Category</th>
+
+            <th scope="col">-</th>
+            <th scope="col">-</th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for product in products %}
+          <tr>
+            <th scope="row">{{product.id}}</th>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.stock}}</td>
+            <td>{{product.money}}</td>
+            <td>{{product.price}}</td>
+            <td>{{product.order}}</td>
+            {% if product.image %}
+            <td><img src= "{{product.image.url}}" width = "200"></td>
+            {% else %}
+            <td>none</td>
+            {% endif %}
+            <td>{{product.category.name}}</td>
+            <td>{{product.publish_date}}</td>
+            <td><button type="button" class="btn btn-secondary"  onclick = location.href="{% url 'update_product' product.id %}"><i class="bi bi-pen-fill"></i></button></td>
+            <td><button type="button" class="btn btn-danger" onclick = location.href="{% url 'delete_product' product.id %}"><i class="bi bi-trash-fill"></i></button></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+  </div>
+</body>
+</html>
+{% endblock %}
