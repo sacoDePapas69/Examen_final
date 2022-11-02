@@ -78,12 +78,8 @@ WSGI_APPLICATION = 'mercadoverde.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.oracle',
-        'NAME': 'prueba3',
-        'USER': 'admin',
-        'PASSWORD': '1234',        
-        'HOST':'127.0.0.1',
-        'PORT':'1521'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
